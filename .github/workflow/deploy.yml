@@ -4,7 +4,7 @@ description: This workflow deploys a CDK stack to AWS when changes are pushed to
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:

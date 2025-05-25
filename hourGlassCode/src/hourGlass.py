@@ -1,4 +1,4 @@
-def hourglass_sum(arr):
+def hourglass_sum(arr): # Function to calculate the maximum hourglass sum in a 2D array
     max_sum = float('-inf')
     
     for i in range(len(arr) - 2):
