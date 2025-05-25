@@ -3,9 +3,8 @@ import os
 
 import aws_cdk as cdk
 
-from lambda_cdk_cicd.pipeline_stack import PipelineStack
-
+from lambda_cdk_cicd.lambda_cdk_cicd_stack import LambdaCdkCicdStack
 
 app = cdk.App()
-PipelineStack(app, "MyCICDPipelineStack")
+LambdaCdkCicdStack(app, "LambdaCdkCicdStack")
 app.synth()
