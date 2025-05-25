@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-import aws_cdk as cdk
+import aws_cdk.core as cdk
 
 from lambda_cdk_cicd.lambda_cdk_cicd_stack import LambdaCdkCicdStack
 
