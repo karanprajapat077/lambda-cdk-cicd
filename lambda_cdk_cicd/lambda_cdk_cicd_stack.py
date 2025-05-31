@@ -18,6 +18,6 @@ class LambdaCdkCicdStack(Stack):
             function_name="hour-glass-function"
         )
 
-        queue = create_hourglass_queue(self)
+        queue = create_hourglass_queue(self, "hour-glass-queue")
 
         func.add_event_source(_lambda_event_sources.SqsEventSource(queue)) 
