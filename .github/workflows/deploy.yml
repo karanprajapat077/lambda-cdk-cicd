@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  deploy:
+  PROD:
     runs-on: ubuntu-latest
 
     env:
