@@ -2,18 +2,21 @@ name: First CDK Deployment Workflow
 description: This workflow deploys a CDK stack to AWS when changes are pushed to the main branch.
 
 on:
-  push:
-    branches:
-      - master
-      - feature/*
-  pull_request:
-    branches:
-      - master
-      - feature/*
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to PROD'
+        required: true
+        default: prod
+  # push:
+  #   branches:
+  #     - master
+  #     - feature/*
 
 jobs:
   PROD:
     runs-on: ubuntu-latest
+    # environment: prod   # requires approval if set in repo setting
 
     env:
       AWS_REGION: ${{ secrets.AWS_REGION }}
