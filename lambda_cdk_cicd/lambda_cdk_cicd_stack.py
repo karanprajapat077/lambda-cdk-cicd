@@ -13,6 +13,6 @@ class LambdaCdkCicdStack(Stack):
             self, "MyFunction",
             runtime=_lambda.Runtime.PYTHON_3_9,
             handler="hourGlass.lambda_handler",
-            code=_lambda.Code.from_asset("hourGlassCode/src")
+            code=_lambda.Code.from_asset("hourGlassCode/src"),
             function_name="hour-glass-function"
         )
