@@ -44,4 +44,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: CDK Deploy
-        run: cdk deploy --all --require-approval never
+        run: |
+          source .venv/bin/activate
+          cdk bootstrap
+          cdk deploy --all --require-approval never
